@@ -19,3 +19,14 @@ return `Final Price: $${finalPrice.toFixed(2)}`; // return formatted final price
 console.log(calculateDiscount(100, 0.2)); // Expected output: "Final Price: $80.00"
 console.log(calculateDiscount(250, 0.15)); // Expected output: "Final Price: $212.50"
 
+// Task 3 Arrow Function
+
+let calculateServiceFee = (amount, serviceType) => { // creating an arrow function to calculate service fee based on service type
+let rateFee = serviceType === "Premium" ? 0.15: serviceType === "Standard" ? 0.10 : serviceType === "Basic" ? 0.05 : 0; // Determine rate based on service type
+let servicefee = amount * rateFee; // Service fee is equal to amount times rate fee
+
+return `Service Fee: $${servicefee.toFixed(2)}`; // Return formatted service fee within two decimal places
+};
+
+console.log(calculateServiceFee(200, "Premium")); // Expected output: "Service Fee: $30.00"
+console.log(calculateServiceFee(500, "Standard")); // Expected output: "Service Fee: $50.00"
